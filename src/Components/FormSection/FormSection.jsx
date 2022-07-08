@@ -86,13 +86,20 @@ export default function FormSection() {
     setTitle(false)
     setYear(false)
   }
-
+  const nulltheValues = () => {
+    setCharecters(0)
+    setMilesDrivenCharecters(0)
+    setModelCharecters(0)
+    setYearCharecters(0)
+    setTitleCharecters(0)
+ }
   const onSubmission = (event) => {
     console.log(file)
     console.log(form)
     setFile("")
     setForm({ ...initialForm })
     nullFunction()
+    nulltheValues()
     event.preventDefault()
   }
    
