@@ -35,11 +35,14 @@ export default function FormSection() {
   const[titlecharecters,setTitleCharecters]=useState(0)
 
   
-    const handleInput = (event) => {
+    
+  
+  
+  
+  const handleInput = (event) => {
     const target = event.target
       const { name, value } = target
-      console.log(value.length, name)
-      if( name === "mike"){
+       if( name === "mike"){
         if (value.length > 10) {
           setMike(true)
         } else {
