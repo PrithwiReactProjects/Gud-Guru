@@ -17,7 +17,6 @@ const initialForm = {
   milesDriven: "",
   contact: "",
   title: "",
-  
 }
 
 export default function FormSection() {
@@ -35,14 +34,11 @@ export default function FormSection() {
   const[titlecharecters,setTitleCharecters]=useState(0)
 
   
-    
-  
-  
-  
-  const handleInput = (event) => {
+    const handleInput = (event) => {
     const target = event.target
       const { name, value } = target
-       if( name === "mike"){
+     
+      if( name === "mike"){
         if (value.length > 10) {
           setMike(true)
         } else {
@@ -53,25 +49,33 @@ export default function FormSection() {
       
       if( name === "year"){
         if (value.length > 6) {
-          setYear(true) 
+          setYear(true)
+        } else {
+          setYear(false)
         }
         setYearCharecters(value.length)
        }
     if (name === "model") {
       if (value.length > 10) {
         setModel(true)
+      } else {
+        setModel(false)
       }
       setModelCharecters(value.length)
     }
     if (name === "milesDriven") {
       if (value.length > 6) {
         setMilesDriven(true)
+      } else {
+        setMilesDriven(false)
       }
       setMilesDrivenCharecters(value.length)
     }
     if (name === "title") {
       if (value.length > 70) {
         setTitle(true)
+      } else {
+        setTitle(false)
       }
       setTitleCharecters(value.length)
     }
